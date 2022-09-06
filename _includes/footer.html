@@ -6,8 +6,10 @@
     </div>
     <div class=" grid-x footer-content align-justify">
       <div class="small-12 medium-shrink cell grid-x">
-        {% capture location %}footer{% endcapture %}
-        {% include flowstate-logo.svg %}
+        <a href="{{ site.baseurl }}/">
+          {% capture location %}footer{% endcapture %}
+          {% include flowstate-logo.svg %}
+        </a>
       </div>
       <div class="small-12 medium-shrink cell grid-x copyright-section">
         <p class="no-select copyright">copyright © {{ 'now' | date: "%Y" }}</p>
