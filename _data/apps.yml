@@ -1,3 +1,8 @@
 agenda:
+  name: agenda
   icon: "agenda-460x0w.webp"
   brand-color: FFAA01
+apple news:
+  name: apple-news
+  icon: "apple-news-460x0w.webp"
+  brand-color: f84969

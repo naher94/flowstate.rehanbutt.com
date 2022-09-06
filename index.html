@@ -9,10 +9,15 @@ layout: default
     <h2>Design better user flows by analyzing recognized products</h2>
     <p>Flowstate is a library of walkthrough teardowns & design patterns from the digital products all around us. Explore trends and gain insights from the industry as a whole.</p>
   </div>
-  <div class="cell grid-x medium-7 grid-padding-x align-center">
+  <div class="cell grid-x medium-7 grid-padding-x align-center intro-explore">
     <p>Explore Flows</p>
-    <div class="">
-      <!-- TODO add a loop to pull featured flows here -->
+    <div class="tag-container grid-x cell align-center">
+      {% assign random-flows = site.workflows | sample:3 %}
+      {%- for flow in random-flows -%}
+      <a href="{{flow.url | prepend: site.baseurl}}" class="cell shrink">
+        <div class="tag">{{flow.title}}</div>
+      </a>
+      {%- endfor -%}
     </div>
   </div>
 </section>
@@ -20,11 +25,13 @@ layout: default
 <section class="recently-added grid-x cell">
   <h2 class="cell">Recently Added Flows</h2>
   {% assign flow_order = site.workflows | sort: 'date' | reverse %}
+  <!-- TODO something off with this width of this container -->
   <div class="grid-x cell recently-added-item-wrapper">
   {%- for flow in flow_order -%}
     <a href="{{ flow.url| prepend: site.baseurl }}" class="grid-x cell small-12 medium-4">
-      <div class="workflow-mini-card grid-x cell align-justify align-middle">
-        {% assign app = site.data.apps[flow.application] %}
+      {% assign app = site.data.apps[flow.application] %}
+      {% assign app-name = app.name | replace: ' ', '-' %}
+      <div class="workflow-mini-card grid-x cell align-justify align-middle {{ app-name }}">
         <div class="cell auto grid-x align-middle">
           <img src="../img/icons/{{ app.icon }}" alt="Application icon for {{flow.application}}">
           <p class="title">{{flow.title}}</p>
@@ -40,9 +47,24 @@ layout: default
 
 <section class="explore-flow-type grid-x cell">
   <a href="">
-    <h2 class="cell">Explore Flow Types</h2>
+    <h2 class="cell">Explore Flow Types <i class="fa-solid fa-chevron-right"></i></h2>
   </a>
-  <!-- show the featured flow types here -->
+  <!-- TODO show the featured flow types here -->
+  <div class="grid-x cell explore-flow-type-item-wrapper grid-margin-x">
+  {%- for flow-type in site.data.flow-type -%}
+    {% if flow-type.featured == true %}
+      <div class="flow-tile cell grid-x medium-4">
+        <div class="icon-container cell grid-x align-center align-middle">
+          {{ flow-type.icon }}
+        </div>
+        <div class="text-section cell grid-x align-middle align-justify">
+          <p class="cell auto name">{{ flow-type.name }}</p>
+          <p class="cell shrink number-of">12 flows</p>
+        </div>
+      </div>
+    {% endif %}
+  {%- endfor -%}
+  </div>
 </section>
 
 <!-- TODO don't forget about updating the RSS feed -->

@@ -4,6 +4,7 @@
 
 @import 'app';
 @import 'variables';
+@import 'design-system';
 @import 'footer';
 @import 'header';
 
@@ -34,6 +35,7 @@ body {
 }
 
 .site-intro{
+  margin-block-end: 8rem;
   h1{
     font-weight: $lato-bold;
     font-style: italic;
@@ -55,11 +57,30 @@ body {
     font-size: 1.3em;
     text-align: center;
   }
+  .intro-explore{
+    margin-block-start: 2rem;
+    p{
+      font-weight: $lato-bold;
+      font-style: italic;
+      text-transform: uppercase;
+      font-size: 0.8rem;
+      line-height: normal;
+      margin-bottom: 0;
+    }
+    .tag-container{
+      margin-block-start: 0.5rem;
+      a{
+        text-decoration: none;
+        margin: 0.25rem;
+      }
+      .tag{
+        @include pill-tag($brand-pink);
+      }
+    }
+  }
 }
 
 .recently-added{  
-  $main-color: #F16B6A;
-  $elevation: 0.3em;
   h2{
     font-family: $lato;
     font-weight: $lato-bold;
@@ -78,23 +99,12 @@ body {
     color: semantic-color(text);
     text-decoration: none;
     .workflow-mini-card{
-      padding: 0.5rem;
-      background-color: rgba($main-color,0.2); //TODO change this color thing
-      border-radius: 16px;
-      border-bottom: 0 solid $main-color;
-      transition: all 0.20s ease-in-out;
-      margin-top: $elevation;
-      &:hover, &:focus{
-        transform: translateY(-$elevation);
-        border-bottom: $elevation solid $main-color;
-        cursor: pointer;
-        transition: all 0.20s ease-in-out;
-        margin-top: 0;
+      @include mini-card($brand-pink,$elevation);
+      &.agenda{
+        @include mini-card($agenda-brand-color,$elevation);
       }
-      &:active{
-        background-color: rgba($main-color,0.3);
-        border-bottom: 0 solid $main-color;
-        transform: translateY(0);
+      &.apple-news{
+        @include mini-card($apple-news-brand-color,$elevation);
       }
       img{
         border-radius: $tile-radius;
@@ -112,8 +122,12 @@ body {
   }
 }
 
+.recently-added-item-wrapper, .explore-flow-type-item-wrapper{
+  margin-block-start: 0.5rem;
+}
+
 .explore-flow-type{
-  margin-block-start: 5rem;
+  margin-block-start: 7rem;
   a{
     color: semantic-color(text);
     h2{
@@ -121,6 +135,45 @@ body {
       font-weight: $lato-bold;
       font-style: italic;
       font-size: 1.5rem;
+      i{
+        font-size: 1.25rem;
+        margin-left: 0.5rem;
+      }
+    }
+  }
+
+  .flow-tile{
+    box-shadow: 0 0 0 0rem $brand-pink;
+    transition: all 0.4s;
+    cursor: pointer;
+    padding: 0.5rem;
+    border-radius: 16px;
+    background-position: center;
+    background-size: 100%;
+    &:hover {
+      box-shadow: 0 0 0 0rem $brand-pink, 0 0 0 0.5rem rgba($brand-pink, 0.16);
+      transform: scale(1.05);
+    }
+    .icon-container{
+      background-color: #F0F1F2;
+      width: 100%;
+      aspect-ratio: 5/3;
+      border-radius: 10px;
+    }
+    .text-section{
+      margin-block-start: 0.5rem;
+      padding: 0 0.25rem;
+      p{
+        display: inline-block;
+      }
+      .name{
+        font-weight: $lato-bold;
+        text-transform: capitalize;
+      }
+      .number-of{
+        font-weight: $lato-light;
+        font-style: italic;
+      }
     }
   }
 }
@@ -132,11 +185,27 @@ body {
     font-weight: $lato-bold;
   }
   .icon-container{
-    margin-inline-end: 1rem;;
+    margin-inline-end: 1rem;
+    border-radius: $tile-radius-medium;
+    position: relative;
     img{
       max-height: 6rem;
       border-radius: $tile-radius-medium;
     }
+    // psuedo class to have the inset border overlap the child element
+    // allows for nice bleed over and color mixing
+    &::before{
+      content: "";
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      right: 0px;
+      bottom: 0px;
+      border-radius: $tile-radius-medium;
+      
+      // Opacity here for bleed over with child content
+      box-shadow: inset 0 0 0 2px rgba(0, 0, 0, .2);
+    }  
   }
   .tag-container{
     .tag{
