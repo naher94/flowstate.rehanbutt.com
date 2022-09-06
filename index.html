@@ -17,5 +17,11 @@ layout: default
   </div>
 </section>
 
+<div class="test-area">
+  {% for item in site.workflows %}
+    <a href="{{ item.url| prepend: site.baseurl }}">{{ item.title }}</a>
+  {% endfor %}
+</div>
+
 <!-- TODO don't forget about updating the RSS feed -->
 <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>

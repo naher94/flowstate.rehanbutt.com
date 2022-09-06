@@ -56,3 +56,20 @@ body {
     text-align: center;
   }
 }
+
+.post{
+  h1{
+    font-family: $lato;
+    font-weight: $lato-bold;
+  }
+  .tag-container{
+    .tag{
+      background-color: $brand-pink;
+      border-radius: $pill-radius;
+      padding: 0.35em 1em;
+      color: $pure-white;
+      font-weight: $lato-bold;
+      margin: 0.25em;
+    }
+  }
+}
