@@ -62,6 +62,13 @@ body {
     font-family: $lato;
     font-weight: $lato-bold;
   }
+  .icon-container{
+    margin-inline-end: 1rem;;
+    img{
+      max-height: 6rem;
+      border-radius: $tile-radius-medium;
+    }
+  }
   .tag-container{
     .tag{
       background-color: $brand-pink;
@@ -70,6 +77,18 @@ body {
       color: $pure-white;
       font-weight: $lato-bold;
       margin: 0.25em;
+      &.flow-type{
+        .flow-type-icon{
+          margin-inline-end: 0.25rem;
+          svg{
+            height: 1rem;
+            width: 1rem;
+            path{
+              fill: white;
+            }
+          }
+        }
+      }
     }
   }
 }

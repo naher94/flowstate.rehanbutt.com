@@ -4,15 +4,21 @@ layout: default
 <article class="post grid-x cell" itemscope itemtype="http://schema.org/BlogPosting">
 
   <header class="post-header grid-x cell align-middle">
-    <div class="cell shrink">
-      logo here
-      {{ site.data.apps.agenda.icon }}
+    <div class="cell shrink icon-container">
+      {% assign app = site.data.apps[page.application] %}
+      <img src="../img/icons/{{ app.icon }}" alt="Application icon for {{page.application}}">
     </div>
     <div class="cell shrink grid-x">
       <h1 class="post-title" itemprop="name headline">{{ page.title }}</h1>
       <div class="grid-x cell tag-container">
+        <div class="tag cell shrink flow-type align-middle grid-x">
+          {% assign flow-type = site.data.flow-type[page.flow-type] %}
+          <!-- TODO center this icon -->
+          <div class="cell shrink flow-type-icon">{{ flow-type.icon }}</div>
+          <div class="cell shrink">{{ page.flow-type }}</div>
+        </div>
         <div class="tag cell shrink">
-          {{ page.flow-type }}
+          #{{ page.application }}
         </div>
         {%- for tag in page.tags -%}
           <div class="tag cell shrink">
