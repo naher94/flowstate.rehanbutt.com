@@ -142,6 +142,12 @@ body {
     }
   }
 
+  a.flow-tile-link-wrapper{
+    &:hover{
+      text-decoration: none;
+    }
+  }
+
   .flow-tile{
     box-shadow: 0 0 0 0rem $brand-pink;
     transition: all 0.4s;
@@ -163,9 +169,6 @@ body {
     .text-section{
       margin-block-start: 0.5rem;
       padding: 0 0.25rem;
-      p{
-        display: inline-block;
-      }
       .name{
         font-weight: $lato-bold;
         text-transform: capitalize;
