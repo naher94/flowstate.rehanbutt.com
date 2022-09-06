@@ -1,38 +1,18 @@
-<footer class="site-footer">
-
-  <div class="wrapper">
-
-    <h2 class="footer-heading">{{ site.title }}</h2>
-
-    <div class="footer-col-wrapper">
-      <div class="footer-col footer-col-1">
-        <ul class="contact-list">
-          <li>{{ site.title }}</li>
-          <li><a href="mailto:{{ site.email }}">{{ site.email }}</a></li>
-        </ul>
+<footer>
+  <div class="grid-container">
+    <!-- TODO add the suggestion banner -->
+    <div class="grid-x align-center">
+      {% include suggestion-banner.html %}
+    </div>
+    <div class=" grid-x footer-content align-justify">
+      <div class="small-12 medium-shrink cell grid-x">
+        {% capture location %}footer{% endcapture %}
+        {% include flowstate-logo.svg %}
       </div>
-
-      <div class="footer-col footer-col-2">
-        <ul class="social-media-list">
-          {% if site.github_username %}
-          <li>
-            {% include icon-github.html username=site.github_username %}
-          </li>
-          {% endif %}
-
-          {% if site.twitter_username %}
-          <li>
-            {% include icon-twitter.html username=site.twitter_username %}
-          </li>
-          {% endif %}
-        </ul>
-      </div>
-
-      <div class="footer-col footer-col-3">
-        <p>{{ site.description }}</p>
+      <div class="small-12 medium-shrink cell grid-x copyright-section">
+        <p class="no-select copyright">copyright © {{ 'now' | date: "%Y" }}</p>
+        <p class="created">created by {% include external-link.html link="https://rehanbutt.com" content="Rehan Butt" %}</p>
       </div>
     </div>
-
   </div>
-
 </footer>

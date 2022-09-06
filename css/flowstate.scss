@@ -1,0 +1,58 @@
+---
+  # Front matter comment to ensure Jekyll properly reads file.
+---
+
+@import 'app';
+@import 'variables';
+@import 'footer';
+@import 'header';
+
+.no-select{
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  user-drag: none;
+  -webkit-user-drag: none;
+}
+
+// Visually hide any element (mostly text) accessibly.
+.visually-hidden{
+  clip: rect(0 0 0 0);
+  clip-path: inset(100%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
+body {
+  font-family: $lato;
+  font-weight: $lato-regular;
+  color: semantic-color(text);
+}
+
+.site-intro{
+  h1{
+    font-weight: $lato-bold;
+    font-style: italic;
+    text-transform: uppercase;
+    color: semantic-color(text-accent);
+    font-size: 1em;
+    display: block;
+    line-height: normal;
+  }
+  h2{
+    font-family: $lato;
+    font-weight: $lato-bold;
+    font-size: 2em;
+    text-align: center;
+    line-height: normal;
+    margin-block-end: 0.5em;
+  }
+  p{
+    font-size: 1.3em;
+    text-align: center;
+  }
+}

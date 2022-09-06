@@ -1,0 +1,65 @@
+footer{
+  background-color: semantic-color(footer-bg);
+  margin-block-start: 7rem;
+  padding-block-end: 3rem;
+  .footer-content{
+    p{
+      padding-bottom: 0;
+    }
+    #flowstate-logo-footer{
+      height: 2rem;
+      g{
+        path{
+          fill: $pure-black; //TODO can this be semantic color?
+        }
+      }
+    }
+    .copyright-section{
+      .copyright{
+        margin-inline-end: 1em;
+      }
+      .created{
+        a{
+          color: semantic-color(text);
+          text-decoration: underline;
+          text-underline-offset: 0.15em;
+        }
+      }
+    }
+  }
+  .suggestion-banner{
+    background-color: $twitter-blue-light;
+    padding: 1rem;
+    border-radius: $tile-radius-medium;
+    margin-block-start: -3rem;
+    margin-block-end: 4rem;
+    .text-section{
+      p{
+        margin-bottom: 0;
+        line-height: normal;
+        &:first-of-type{
+          font-weight: $lato-bold;
+          font-size: 1.75rem;
+          margin-block-end: 0.25rem;
+        }
+        &:last-of-type{
+          font-size: 1.25rem;
+        }
+      }
+    }
+    .twitter{
+      background-color: $twitter-blue;
+      border-radius: $tile-radius;
+      color: $pure-white; //TODO semantic color
+      padding: 1rem;
+      font-weight: $lato-bold;
+      i{
+        margin-inline-start: 0.5em;
+      }
+      &:hover{
+        text-decoration: none;
+        background-color: $twitter-blue-dark;
+      }
+    }
+  }
+}

@@ -1,0 +1,19 @@
+header{
+  padding-block-start: 3rem;
+  padding-block-end: 3rem;
+  .logo-container{
+    #flowstate-logo-header{
+      height: 3rem;
+    }
+  }
+  .site-nav{
+    .page-link{
+      padding: 0.75rem 1rem;
+      border-radius: $tile-radius;
+      &:hover{
+        background-color: $brand-pink-light; //TODO semantic color
+        text-decoration: none;
+      }
+    }
+  }
+}
