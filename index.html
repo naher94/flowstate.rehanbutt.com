@@ -11,17 +11,39 @@ layout: default
   </div>
   <div class="cell grid-x medium-7 grid-padding-x align-center">
     <p>Explore Flows</p>
-    <div>
+    <div class="">
       <!-- TODO add a loop to pull featured flows here -->
     </div>
   </div>
 </section>
 
-<div class="test-area">
-  {% for item in site.workflows %}
-    <a href="{{ item.url| prepend: site.baseurl }}">{{ item.title }}</a>
-  {% endfor %}
-</div>
+<section class="recently-added grid-x cell">
+  <h2 class="cell">Recently Added Flows</h2>
+  {% assign flow_order = site.workflows | sort: 'date' | reverse %}
+  <div class="grid-x cell recently-added-item-wrapper">
+  {%- for flow in flow_order -%}
+    <a href="{{ flow.url| prepend: site.baseurl }}" class="grid-x cell small-12 medium-4">
+      <div class="workflow-mini-card grid-x cell align-justify align-middle">
+        {% assign app = site.data.apps[flow.application] %}
+        <div class="cell auto grid-x align-middle">
+          <img src="../img/icons/{{ app.icon }}" alt="Application icon for {{flow.application}}">
+          <p class="title">{{flow.title}}</p>
+        </div>
+        <div class="cell shrink icon-container">
+          <i class="fa-solid fa-video"></i>
+        </div>
+      </div>
+    </a>
+  {%- endfor -%}
+  </div>
+</section>
+
+<section class="explore-flow-type grid-x cell">
+  <a href="">
+    <h2 class="cell">Explore Flow Types</h2>
+  </a>
+  <!-- show the featured flow types here -->
+</section>
 
 <!-- TODO don't forget about updating the RSS feed -->
 <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>

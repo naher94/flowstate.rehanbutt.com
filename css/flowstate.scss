@@ -57,6 +57,75 @@ body {
   }
 }
 
+.recently-added{  
+  $main-color: #F16B6A;
+  $elevation: 0.3em;
+  h2{
+    font-family: $lato;
+    font-weight: $lato-bold;
+    font-style: italic;
+    font-size: 1.5rem;
+  }
+  .recently-added-item-wrapper{
+    &>.cell{
+      padding-left: 0.4rem;
+      padding-right: 0.4rem;
+      padding-top: 0.3rem;
+      padding-bottom: 0.3rem;
+    }
+  }
+  a{
+    color: semantic-color(text);
+    text-decoration: none;
+    .workflow-mini-card{
+      padding: 0.5rem;
+      background-color: rgba($main-color,0.2); //TODO change this color thing
+      border-radius: 16px;
+      border-bottom: 0 solid $main-color;
+      transition: all 0.20s ease-in-out;
+      margin-top: $elevation;
+      &:hover, &:focus{
+        transform: translateY(-$elevation);
+        border-bottom: $elevation solid $main-color;
+        cursor: pointer;
+        transition: all 0.20s ease-in-out;
+        margin-top: 0;
+      }
+      &:active{
+        background-color: rgba($main-color,0.3);
+        border-bottom: 0 solid $main-color;
+        transform: translateY(0);
+      }
+      img{
+        border-radius: $tile-radius;
+        height: 2.5rem;
+      }
+      .title{
+        font-weight: $lato-bold;
+        margin-bottom: 0;
+        margin-inline-start: 0.5rem;
+      }
+      .icon-container{
+        margin-inline-end: 0.5rem;
+      }
+    }
+  }
+}
+
+.explore-flow-type{
+  margin-block-start: 5rem;
+  a{
+    color: semantic-color(text);
+    h2{
+      font-family: $lato;
+      font-weight: $lato-bold;
+      font-style: italic;
+      font-size: 1.5rem;
+    }
+  }
+}
+
+
 .post{
   h1{
     font-family: $lato;
