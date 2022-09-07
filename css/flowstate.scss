@@ -36,6 +36,7 @@ body {
 
 .site-intro{
   margin-block-end: 8rem;
+  background: center / contain no-repeat url(../img/intro-bg.svg);
   h1{
     font-weight: $lato-bold;
     font-style: italic;
