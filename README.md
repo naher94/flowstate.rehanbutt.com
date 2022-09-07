@@ -5,10 +5,10 @@
 ## Development Notes
 
 Here is a checklist to review when adding a new workflow to the project:
-- [ ] Create a `markdown` file into the `_workflows` collection
-- [ ] Add the application, if new, to the `_data/apps.yml`
-- [ ] Add the application brand color to `design-system.scss` as below
-- [ ] Add the workflow type, if new, to the `_workflows` collection
+- Create a `markdown` file into the `_workflows` collection
+- Add the application, if new, to the `_data/apps.yml`
+- Add the application brand color to `design-system.scss` as below
+- Add the workflow type, if new, to the `_workflows` collection
 
 ```
 //Brand color sample
