@@ -1,9 +1,15 @@
 header{
   padding-block-start: 3rem;
   padding-block-end: 3rem;
+  @include breakpoint(small only){
+    padding-block-end: 1rem;
+  }
   .logo-container{
     #flowstate-logo-header{
       height: 3rem;
+    }
+    @include breakpoint(small only){
+      text-align: center;
     }
   }
   .site-nav{
@@ -15,6 +21,9 @@ header{
         background-color: $brand-pink-light; //TODO semantic color
         text-decoration: none;
       }
+    }
+    @include breakpoint(small only){
+      display: none;
     }
   }
 }

@@ -47,20 +47,24 @@ layout: default
 <section class="explore-flow-type grid-x cell">
   <a href="#">
     <!-- TODO style this better -->
-    <h2 class="cell">Explore Flow Types <i class="fa-solid fa-chevron-right"></i></h2>
+    <a href="{% link flow-types.md %}">
+      <h2 class="cell">Explore Flow Types <i class="fa-solid fa-chevron-right"></i></h2>
+    </a>
   </a>
   <div class="grid-x cell explore-flow-type-item-wrapper">
-  {% for flow-type in site.data.flow-type %}
-    {% if flow-type[1].featured == true %}
-    <a href="#" class="cell grid-x medium-4 flow-tile-link-wrapper">
+  {% for flow-type in site.flow-types %}
+    {% if flow-type.featured == true %}
+    <a href="{{flow-type.url}}" class="cell grid-x medium-4 flow-tile-link-wrapper">
       <div class="cell grid-x spacer">
         <div class="flow-tile cell grid-x">
           <div class="icon-container cell grid-x align-center align-middle">
-            {{ flow-type[1].icon }}
+            {{ flow-type.icon }}
           </div>
           <div class="text-section cell grid-x align-middle align-justify">
-            <span class="cell auto name">{{ flow-type[1].name }}</span>
-            <span class="cell shrink number-of">12 flows</span>
+            <span class="cell auto name">{{ flow-type.name }}</span>
+            {% assign flow-count-array = site.workflows | where:"flow-type", flow-type.name %}
+            {% assign flow-count = flow-count-array | size %}
+            <span class="cell shrink number-of">{{flow-count}} flows</span>
           </div>
         </div>
       </div>

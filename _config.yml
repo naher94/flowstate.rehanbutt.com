@@ -24,4 +24,7 @@ plugins: [jekyll-sitemap]
 collections:
   workflows:
     output: true
-    permalink: /workflow/:path
+    permalink: /workflows/:path
+  flow-types:
+    output: true
+    permalink: /flow-types/:path

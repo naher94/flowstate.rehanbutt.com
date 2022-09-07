@@ -69,6 +69,7 @@ section{
       &.apple-news{
         @include mini-card($apple-news-brand-color,$elevation);
       }
+      // TODO add color override for each app
       img{
         border-radius: $tile-radius;
         height: 2.5rem;
@@ -86,5 +87,69 @@ section{
       color: semantic-color(text);
       text-decoration: none;
     }
+  }
+}
+
+.explore-flow-type-item-wrapper{
+  a{
+    color: semantic-color(text);
+    h2{
+      font-family: $lato;
+      font-weight: $lato-bold;
+      font-style: italic;
+      font-size: 1.5rem;
+      i{
+        font-size: 1.25rem;
+        margin-left: 0.5rem;
+      }
+    }
+  }
+
+  a.flow-tile-link-wrapper{
+    &:hover{
+      text-decoration: none;
+    }
+  }
+  .flow-tile{
+    box-shadow: 0 0 0 0rem $brand-pink;
+    transition: all 0.4s;
+    cursor: pointer;
+    padding: 0.5rem;
+    border-radius: 16px;
+    background-position: center;
+    background-size: 100%;
+    &:hover {
+      box-shadow: 0 0 0 0rem $brand-pink, 0 0 0 0.5rem rgba($brand-pink, 0.16);
+      transform: scale(0.9);
+    }
+    .icon-container{
+      background-color: #F0F1F2;
+      width: 100%;
+      aspect-ratio: 5/3;
+      border-radius: 10px;
+    }
+    .text-section{
+      margin-block-start: 0.5rem;
+      padding: 0 0.25rem;
+      .name{
+        font-weight: $lato-bold;
+        text-transform: capitalize;
+      }
+      .number-of{
+        font-weight: $lato-light;
+        font-style: italic;
+      }
+    }
+  }
+}
+
+.announcement-banner{
+  background-color: #F0F1F2;
+  text-align: center;
+  padding: 0.75rem 0.5rem;
+  // font-weight: $lato-bold;
+  font-style: italic;
+  p{
+    margin-bottom: 0;
   }
 }

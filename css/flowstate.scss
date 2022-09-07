@@ -36,6 +36,7 @@ body {
 
 .site-intro{
   margin-block-end: 8rem;
+  background: center / contain no-repeat url(../img/intro-bg.svg);
   h1{
     font-weight: $lato-bold;
     font-style: italic;
@@ -86,72 +87,40 @@ body {
 
 .explore-flow-type{
   margin-block-start: 7rem;
-  a{
-    color: semantic-color(text);
-    h2{
-      font-family: $lato;
-      font-weight: $lato-bold;
-      font-style: italic;
-      font-size: 1.5rem;
-      i{
-        font-size: 1.25rem;
-        margin-left: 0.5rem;
-      }
-    }
-  }
-
-  a.flow-tile-link-wrapper{
-    &:hover{
-      text-decoration: none;
-    }
-  }
-
-  .flow-tile{
-    box-shadow: 0 0 0 0rem $brand-pink;
-    transition: all 0.4s;
-    cursor: pointer;
-    padding: 0.5rem;
-    border-radius: 16px;
-    background-position: center;
-    background-size: 100%;
-    &:hover {
-      box-shadow: 0 0 0 0rem $brand-pink, 0 0 0 0.5rem rgba($brand-pink, 0.16);
-      transform: scale(0.9);
-    }
-    .icon-container{
-      background-color: #F0F1F2;
-      width: 100%;
-      aspect-ratio: 5/3;
-      border-radius: 10px;
-    }
-    .text-section{
-      margin-block-start: 0.5rem;
-      padding: 0 0.25rem;
-      .name{
-        font-weight: $lato-bold;
-        text-transform: capitalize;
-      }
-      .number-of{
-        font-weight: $lato-light;
-        font-style: italic;
-      }
-    }
-  }
 }
 
 
 .post-header{
+  @include breakpoint(small only){
+    padding-block-start: 0;
+  }
+  .post-meta{
+    margin-bottom: 0;
+  }
   h1{
     font-family: $lato;
     font-weight: $lato-bold;
+  }
+  .icon-container-container{
+    @include breakpoint(small only){
+      text-align: center;
+    }
   }
   .icon-container{
     margin-inline-end: 1rem;
     border-radius: $tile-radius-medium;
     position: relative;
+    display: inline-block;
+    @include breakpoint(small only){
+      margin-block-end: 1rem;
+      margin-inline-end: 0;
+    }
     img{
-      max-height: 6rem;
+      max-height: 7.5rem;
       border-radius: $tile-radius-medium;
+      @include breakpoint(small only){
+        max-height: 6rem;
+      }
     }
     // psuedo class to have the inset border overlap the child element
     // allows for nice bleed over and color mixing
@@ -168,7 +137,20 @@ body {
       box-shadow: inset 0 0 0 2px rgba(0, 0, 0, .2);
     }  
   }
+  .word-section{
+    @include breakpoint(small only){
+      text-align: center;
+    }
+  }
   .tag-container{
+    @include breakpoint(small only){
+      justify-content: center;
+    }
+    a{
+      &:hover{
+        text-decoration: none;
+      }
+    }
     .tag{
       background-color: $brand-pink;
       border-radius: $pill-radius;
@@ -177,6 +159,7 @@ body {
       font-weight: $lato-bold;
       margin: 0.25em;
       &.flow-type{
+        @include pill-tag($brand-pink);
         .flow-type-icon{
           margin-inline-end: 0.5rem;
           margin-inline-start: -0.25rem;
@@ -201,9 +184,15 @@ body {
     background-image:url("../img/loading.svg");
     background-position: center;
     background-repeat: no-repeat;
+    @include breakpoint(small only){
+      aspect-ratio: 3/5;
+    }
   }
   iframe{
     aspect-ratio: 5/3;
+    @include breakpoint(small only){
+      aspect-ratio: 3/5;
+    }
   }
 }
 
@@ -211,5 +200,35 @@ body {
   margin-block-start: 5rem;
   .mini-card-wrapper{
     margin-block-start: 0.5rem;
+  }
+  @include breakpoint(small only){
+    margin-block-start: 2.5rem;
+  }
+}
+
+.flow-type-overview{
+  .post-header{
+    .icon-container{
+      background-color: #F0F1F2;
+      border-radius: $pill-radius;
+      display: inline-flex;
+      aspect-ratio: 1/1;
+      padding: 1.5rem;
+      &::before{
+        border-radius: $pill-radius;
+      }
+      svg{
+        width: 5rem;
+        height: 5rem;
+      }
+    }
+    .word-container{
+      @include breakpoint(small only){
+        justify-content: center;
+      }
+    }
+  }
+  .other-flows{
+    margin-block-start: 0;
   }
 }
