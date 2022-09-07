@@ -80,48 +80,6 @@ body {
   }
 }
 
-.recently-added{  
-  h2{
-    font-family: $lato;
-    font-weight: $lato-bold;
-    font-style: italic;
-    font-size: 1.5rem;
-  }
-  .recently-added-item-wrapper{
-    &>.cell{
-      padding-left: 0.4rem;
-      padding-right: 0.4rem;
-      padding-top: 0.3rem;
-      padding-bottom: 0.3rem;
-    }
-  }
-  a{
-    color: semantic-color(text);
-    text-decoration: none;
-    .workflow-mini-card{
-      @include mini-card($brand-pink,$elevation);
-      &.agenda{
-        @include mini-card($agenda-brand-color,$elevation);
-      }
-      &.apple-news{
-        @include mini-card($apple-news-brand-color,$elevation);
-      }
-      img{
-        border-radius: $tile-radius;
-        height: 2.5rem;
-      }
-      .title{
-        font-weight: $lato-bold;
-        margin-bottom: 0;
-        margin-inline-start: 0.5rem;
-      }
-      .icon-container{
-        margin-inline-end: 0.5rem;
-      }
-    }
-  }
-}
-
 .recently-added-item-wrapper, .explore-flow-type-item-wrapper{
   margin-block-start: 0.5rem;
 }
@@ -186,7 +144,7 @@ body {
 }
 
 
-.post{
+.post-header{
   h1{
     font-family: $lato;
     font-weight: $lato-bold;
@@ -236,17 +194,24 @@ body {
       }
     }
   }
-  .post-content{
-    .video-container{
-      aspect-ratio: 5/3;
-      background-color: #F0F1F2;
-      position: relative;
-      background-image:url("../img/loading.svg");
-      background-position: center;
-      background-repeat: no-repeat;
-    }
-    iframe{
-      aspect-ratio: 5/3;
-    }
+}
+.post-content{
+  .video-container{
+    aspect-ratio: 5/3;
+    background-color: #F0F1F2;
+    position: relative;
+    background-image:url("../img/loading.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  iframe{
+    aspect-ratio: 5/3;
+  }
+}
+
+.other-flows{
+  margin-block-start: 5rem;
+  .mini-card-wrapper{
+    margin-block-start: 0.5rem;
   }
 }

@@ -41,3 +41,50 @@
     transform: translateY(0);
   }
 }
+
+h2{
+  font-family: $lato;
+  font-weight: $lato-bold;
+  font-style: italic;
+  font-size: 1.5rem;
+}
+
+section{
+  .mini-card-wrapper{
+    &>.cell{
+      padding-left: 0.4rem;
+      padding-right: 0.4rem;
+      padding-top: 0.3rem;
+      padding-bottom: 0.3rem;
+    }
+  }
+  a{
+    color: semantic-color(text);
+    text-decoration: none;
+    .workflow-mini-card{
+      @include mini-card($brand-pink,$elevation);
+      &.agenda{
+        @include mini-card($agenda-brand-color,$elevation);
+      }
+      &.apple-news{
+        @include mini-card($apple-news-brand-color,$elevation);
+      }
+      img{
+        border-radius: $tile-radius;
+        height: 2.5rem;
+      }
+      .title{
+        font-weight: $lato-bold;
+        margin-bottom: 0;
+        margin-inline-start: 0.5rem;
+      }
+      .icon-container{
+        margin-inline-end: 0.5rem;
+      }
+    }
+    &:hover,&:visited{
+      color: semantic-color(text);
+      text-decoration: none;
+    }
+  }
+}
