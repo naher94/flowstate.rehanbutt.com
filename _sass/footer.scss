@@ -54,12 +54,18 @@ footer{
       padding: 1rem;
       font-weight: $lato-bold;
       transition: $sprint;
+      display: inline-block;
       i{
         margin-inline-start: 0.5em;
       }
       &:hover{
         text-decoration: none;
         background-color: $twitter-blue-dark;
+      }
+      @include breakpoint(small only){
+        width: 100%;
+        text-align: center;
+        margin-block-start: 1rem;
       }
     }
   }
