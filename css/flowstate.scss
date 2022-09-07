@@ -169,6 +169,14 @@ body {
     }  
   }
   .tag-container{
+    a{
+      &:hover{
+        text-decoration: none;
+        // div{
+        //   text-decoration: none;
+        // }
+      }
+    }
     .tag{
       background-color: $brand-pink;
       border-radius: $pill-radius;
@@ -177,6 +185,7 @@ body {
       font-weight: $lato-bold;
       margin: 0.25em;
       &.flow-type{
+        @include pill-tag($brand-pink);
         .flow-type-icon{
           margin-inline-end: 0.5rem;
           margin-inline-start: -0.25rem;
