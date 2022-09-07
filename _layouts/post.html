@@ -12,9 +12,9 @@ layout: default
       <h1 class="post-title" itemprop="name headline">{{ page.title }}</h1>
       <div class="grid-x cell tag-container">
         <!-- TODO link this flow type item -->
-        <a href="#" class="cell grid-x shrink">
+        {% assign flow-type-ref = site.flow-types | where:"name", page.flow-type | first %}
+        <a href="{{flow-type-ref.url}}" class="cell grid-x shrink">
           <div class="tag cell shrink flow-type align-middle grid-x">
-            {% assign flow-type-ref = site.data.flow-type[page.flow-type] %}
             <div class="cell shrink flow-type-icon">{{ flow-type-ref.icon }}</div>
             <div class="cell shrink">{{ page.flow-type }}</div>
           </div>
