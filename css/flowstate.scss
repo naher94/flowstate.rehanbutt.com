@@ -178,10 +178,12 @@ body {
       margin: 0.25em;
       &.flow-type{
         .flow-type-icon{
-          margin-inline-end: 0.25rem;
+          margin-inline-end: 0.5rem;
+          margin-inline-start: -0.25rem;
+          height: 1.5rem;
           svg{
-            height: 1rem;
-            width: 1rem;
+            height: 1.5rem;
+            width: 1.5rem;
             path{
               fill: white;
             }
