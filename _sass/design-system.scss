@@ -1,0 +1,90 @@
+@mixin mini-card($main-color,$elevation){
+  padding: 0.5rem;
+  background-color: rgba($main-color,0.2); //TODO change this color thing
+  border-radius: 16px;
+  border-bottom: 0 solid $main-color;
+  transition: all 0.20s ease-in-out;
+  margin-top: $elevation;
+  &:hover, &:focus{
+    transform: translateY(-$elevation);
+    border-bottom: $elevation solid $main-color;
+    cursor: pointer;
+    transition: all 0.20s ease-in-out;
+    margin-top: 0;
+  }
+  &:active{
+    background-color: rgba($main-color,0.3);
+    border-bottom: 0 solid $main-color;
+    transform: translateY(0);
+  }
+}
+
+@mixin pill-tag($main-color) {
+  $main-dark: darken($main-color, 20);
+  padding: 0.35em 1em;
+  font-weight: $lato-bold;
+  background-color: $main-color;
+  border-radius: $pill-radius;
+  border-bottom: 0 solid $main-color;
+  transition: all 0.20s ease-in-out;
+  color: $pure-white;
+  &:hover, &:focus{
+    transform: translateY(-$elevation);
+    box-shadow: 0 1px 0 $main-dark,0 3px 0 -1px $main-dark,0 5px 0 -2px $main-dark,0 7px 0 -3px $main-dark,0 9px 0 -5px $main-dark,0 11px 0 -6px $main-dark;
+    cursor: pointer;
+    transition: all 0.20s ease-in-out;
+    background-color: darken($main-color, 10);
+  }
+  &:active{
+    background-color: rgba($main-color,1);
+    box-shadow: 0 0 0 $main-color,0 0 0 0 $main-color,0 0 0 0 $main-color,0 0 0 0 $main-color,0 0 0 0 $main-color,0 0 0 0 $main-color;
+    transform: translateY(0);
+  }
+}
+
+h2{
+  font-family: $lato;
+  font-weight: $lato-bold;
+  font-style: italic;
+  font-size: 1.5rem;
+}
+
+section{
+  .mini-card-wrapper{
+    &>.cell{
+      padding-left: 0.4rem;
+      padding-right: 0.4rem;
+      padding-top: 0.3rem;
+      padding-bottom: 0.3rem;
+    }
+  }
+  a{
+    color: semantic-color(text);
+    text-decoration: none;
+    .workflow-mini-card{
+      @include mini-card($brand-pink,$elevation);
+      &.agenda{
+        @include mini-card($agenda-brand-color,$elevation);
+      }
+      &.apple-news{
+        @include mini-card($apple-news-brand-color,$elevation);
+      }
+      img{
+        border-radius: $tile-radius;
+        height: 2.5rem;
+      }
+      .title{
+        font-weight: $lato-bold;
+        margin-bottom: 0;
+        margin-inline-start: 0.5rem;
+      }
+      .icon-container{
+        margin-inline-end: 0.5rem;
+      }
+    }
+    &:hover,&:visited{
+      color: semantic-color(text);
+      text-decoration: none;
+    }
+  }
+}
