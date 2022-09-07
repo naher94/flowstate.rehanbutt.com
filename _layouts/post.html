@@ -11,6 +11,7 @@ layout: default
     <div class="cell auto grid-x">
       <h1 class="post-title" itemprop="name headline">{{ page.title }}</h1>
       <div class="grid-x cell tag-container">
+        <!-- TODO link this flow type item -->
         <div class="tag cell shrink flow-type align-middle grid-x">
           {% assign flow-type-ref = site.data.flow-type[page.flow-type] %}
           <div class="cell shrink flow-type-icon">{{ flow-type-ref.icon }}</div>
