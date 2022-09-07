@@ -4,13 +4,13 @@
       {% include suggestion-banner.html %}
     </div>
     <div class=" grid-x footer-content align-justify">
-      <div class="small-12 medium-shrink cell grid-x">
+      <div class="small-12 medium-shrink cell grid-x align-center">
         <a href="{{ site.baseurl }}/">
           {% capture location %}footer{% endcapture %}
           {% include flowstate-logo.svg %}
         </a>
       </div>
-      <div class="small-12 medium-shrink cell grid-x copyright-section">
+      <div class="small-12 medium-shrink cell grid-x copyright-section align-center">
         <p class="no-select copyright">copyright © {{ 'now' | date: "%Y" }}</p>
         <p class="created">created by {% include external-link.html link="https://rehanbutt.com" content="Rehan Butt" %}</p>
       </div>

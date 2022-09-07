@@ -25,6 +25,9 @@ footer{
           text-underline-offset: 0.15em;
         }
       }
+      @include breakpoint(small only){
+        margin-block-start: 1rem;
+      }
     }
   }
   .suggestion-banner{
