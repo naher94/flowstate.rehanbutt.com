@@ -4,10 +4,12 @@ layout: default
 <article class="grid-x cell flow-type-overview" itemscope itemtype="http://schema.org/BlogPosting">
 
   <header class="post-header grid-x cell align-middle">
-    <div class="cell shrink icon-container">
-      {{ page.icon }}
+    <div class="cell small-12 medium-shrink icon-container-container">
+      <div class="icon-container">
+        {{ page.icon }}
+      </div>
     </div>
-    <div class="cell auto grid-x">
+    <div class="cell small-12 medium-auto grid-x word-container">
       <h1 class="post-title" itemprop="name headline">{{ page.title }}</h1>
     </div>
   </header>

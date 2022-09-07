@@ -211,6 +211,7 @@ body {
     .icon-container{
       background-color: #F0F1F2;
       border-radius: $pill-radius;
+      display: inline-flex;
       aspect-ratio: 1/1;
       padding: 1.5rem;
       &::before{
@@ -219,6 +220,11 @@ body {
       svg{
         width: 5rem;
         height: 5rem;
+      }
+    }
+    .word-container{
+      @include breakpoint(small only){
+        justify-content: center;
       }
     }
   }
