@@ -233,6 +233,14 @@ body {
     }
   }
   .post-content{
+    .video-container{
+      aspect-ratio: 5/3;
+      background-color: #F0F1F2;
+      position: relative;
+      background-image:url("../img/loading.svg");
+      background-position: center;
+      background-repeat: no-repeat;
+    }
     iframe{
       aspect-ratio: 5/3;
     }
