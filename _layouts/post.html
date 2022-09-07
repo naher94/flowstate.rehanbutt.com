@@ -41,7 +41,7 @@ layout: default
   </section>
 
   <section class="other-flows grid-x cell">
-    <h2>Other flows from {{ page.application | capitalize }}</h2>
+    <h2>Other flows from {{ site.data.apps[page.application].name }}</h2>
 
     {% assign flow_order = site.workflows | sort: 'date' | reverse %}
     {% assign counter = 0 %}
