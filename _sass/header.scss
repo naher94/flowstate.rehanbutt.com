@@ -8,8 +8,9 @@ header{
   }
   .site-nav{
     .page-link{
-      padding: 0.75rem 1rem;
+      padding: 0.6rem 1rem;
       border-radius: $tile-radius;
+      transition: $sprint;
       &:hover{
         background-color: $brand-pink-light; //TODO semantic color
         text-decoration: none;
