@@ -9,6 +9,10 @@ layout: default
       <img src="../img/icons/{{ app.icon }}" alt="Application icon for {{page.application}}">
     </div>
     <div class="cell auto grid-x">
+      <p class="post-meta cell">
+        Published
+        <time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{{ page.date | date: "%b %-d, %Y" }}</time>
+      </p>
       <h1 class="post-title" itemprop="name headline">{{ page.title }}</h1>
       <div class="grid-x cell tag-container">
         {% assign flow-type-ref = site.flow-types | where:"name", page.flow-type | first %}
@@ -27,11 +31,6 @@ layout: default
           </div>
         {%- endfor -%}
       </div>
-    </div>
-    <div class="cell shrink">
-      <p class="post-meta">
-        <time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{{ page.date | date: "%b %-d, %Y" }}</time>
-      </p>
     </div>
   </header>
 

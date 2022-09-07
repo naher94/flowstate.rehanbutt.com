@@ -91,6 +91,9 @@ body {
 
 
 .post-header{
+  .post-meta{
+    margin-bottom: 0;
+  }
   h1{
     font-family: $lato;
     font-weight: $lato-bold;
@@ -100,7 +103,7 @@ body {
     border-radius: $tile-radius-medium;
     position: relative;
     img{
-      max-height: 6rem;
+      max-height: 7.5rem;
       border-radius: $tile-radius-medium;
     }
     // psuedo class to have the inset border overlap the child element
