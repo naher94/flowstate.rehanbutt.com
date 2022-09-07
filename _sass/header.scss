@@ -1,6 +1,9 @@
 header{
   padding-block-start: 3rem;
   padding-block-end: 3rem;
+  @include breakpoint(small only){
+    padding-block-end: 1rem;
+  }
   .logo-container{
     #flowstate-logo-header{
       height: 3rem;

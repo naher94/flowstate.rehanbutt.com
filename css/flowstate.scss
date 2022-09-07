@@ -91,6 +91,9 @@ body {
 
 
 .post-header{
+  @include breakpoint(small only){
+    padding-block-start: 0;
+  }
   .post-meta{
     margin-bottom: 0;
   }
@@ -98,13 +101,26 @@ body {
     font-family: $lato;
     font-weight: $lato-bold;
   }
+  .icon-container-container{
+    @include breakpoint(small only){
+      text-align: center;
+    }
+  }
   .icon-container{
     margin-inline-end: 1rem;
     border-radius: $tile-radius-medium;
     position: relative;
+    display: inline-block;
+    @include breakpoint(small only){
+      margin-block-end: 1rem;
+      margin-inline-end: 0;
+    }
     img{
       max-height: 7.5rem;
       border-radius: $tile-radius-medium;
+      @include breakpoint(small only){
+        max-height: 6rem;
+      }
     }
     // psuedo class to have the inset border overlap the child element
     // allows for nice bleed over and color mixing
@@ -121,13 +137,18 @@ body {
       box-shadow: inset 0 0 0 2px rgba(0, 0, 0, .2);
     }  
   }
+  .word-section{
+    @include breakpoint(small only){
+      text-align: center;
+    }
+  }
   .tag-container{
+    @include breakpoint(small only){
+      justify-content: center;
+    }
     a{
       &:hover{
         text-decoration: none;
-        // div{
-        //   text-decoration: none;
-        // }
       }
     }
     .tag{
@@ -163,9 +184,15 @@ body {
     background-image:url("../img/loading.svg");
     background-position: center;
     background-repeat: no-repeat;
+    @include breakpoint(small only){
+      aspect-ratio: 3/5;
+    }
   }
   iframe{
     aspect-ratio: 5/3;
+    @include breakpoint(small only){
+      aspect-ratio: 3/5;
+    }
   }
 }
 
@@ -173,6 +200,9 @@ body {
   margin-block-start: 5rem;
   .mini-card-wrapper{
     margin-block-start: 0.5rem;
+  }
+  @include breakpoint(small only){
+    margin-block-start: 2.5rem;
   }
 }
 
