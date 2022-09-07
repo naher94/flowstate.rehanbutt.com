@@ -47,7 +47,9 @@ layout: default
 <section class="explore-flow-type grid-x cell">
   <a href="#">
     <!-- TODO style this better -->
-    <h2 class="cell">Explore Flow Types <i class="fa-solid fa-chevron-right"></i></h2>
+    <a href="{% link flow-types.md %}">
+      <h2 class="cell">Explore Flow Types <i class="fa-solid fa-chevron-right"></i></h2>
+    </a>
   </a>
   <div class="grid-x cell explore-flow-type-item-wrapper">
   {% for flow-type in site.data.flow-type %}
