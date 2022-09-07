@@ -5,6 +5,9 @@ header{
     #flowstate-logo-header{
       height: 3rem;
     }
+    @include breakpoint(small only){
+      text-align: center;
+    }
   }
   .site-nav{
     .page-link{
@@ -15,6 +18,9 @@ header{
         background-color: $brand-pink-light; //TODO semantic color
         text-decoration: none;
       }
+    }
+    @include breakpoint(small only){
+      display: none;
     }
   }
 }
