@@ -8,4 +8,4 @@ flow-type: onboarding
 tags: [iphone, touch, ios]
 ---
 
-<!-- <iframe src="https://ant.umn.edu/embedded/egnuhifjki" height="800px" width="100%" scrolling="no" frameborder="0"></iframe> -->
+<!-- screen shots or general description info could go here -->
