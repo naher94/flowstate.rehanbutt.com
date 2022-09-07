@@ -53,6 +53,7 @@ footer{
       color: $pure-white; //TODO semantic color
       padding: 1rem;
       font-weight: $lato-bold;
+      transition: $sprint;
       i{
         margin-inline-start: 0.5em;
       }
