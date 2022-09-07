@@ -34,11 +34,42 @@ layout: default
     </div>
   </header>
 
-  <div class="post-content cell" itemprop="articleBody">
+  <section class="post-content cell" itemprop="articleBody">
     <div class="video-container">
       <iframe src="{{ page.video-link }}" width="100%" scrolling="no" frameborder="0"></iframe>
     </div>
     {{ content }}
-  </div>
+  </section>
+
+  <section class="other-flows grid-x cell">
+    <h2>Other flows from {{ page.application | capitalize }}</h2>
+
+    {% assign flow_order = site.workflows | sort: 'date' | reverse %}
+    {% assign counter = 0 %}
+    <div class="grid-x cell mini-card-wrapper">
+      {%- for flow in flow_order -%}
+      {% if flow.application == page.application %}
+      {% assign counter = counter | plus: 1 %}
+      <a href="{{ flow.url| prepend: site.baseurl }}" class="grid-x cell small-12 medium-4">
+        {% assign app = site.data.apps[flow.application] %}
+        {% assign app-name = app.name | replace: ' ', '-' %}
+        <div class="workflow-mini-card grid-x cell align-justify align-middle {{ app-name }}">
+          <div class="cell auto grid-x align-middle">
+            <img src="../img/icons/{{ app.icon }}" alt="Application icon for {{flow.application}}">
+            <p class="title">{{flow.title}}</p>
+          </div>
+          <div class="cell shrink icon-container">
+            <i class="fa-solid fa-video"></i>
+          </div>
+        </div>
+      </a>
+      {%- comment -%} limits the other flows to 6 items {%- endcomment -%}
+      {%- if counter == 6 -%}
+        {% break %}
+      {%- endif -%}
+      {% endif %}
+      {%- endfor -%}
+    </div>
+  </section>
 
 </article>
