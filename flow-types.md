@@ -14,8 +14,9 @@ permalink: /flow-types/
           </div>
           <div class="text-section cell grid-x align-middle align-justify">
             <span class="cell auto name">{{ flow-type.name }}</span>
-            <!-- TODO make this number real -->
-            <span class="cell shrink number-of">12 flows</span>
+            {% assign flow-count-array = site.workflows | where:"flow-type", flow-type.name %}
+            {% assign flow-count = flow-count-array | size %}
+            <span class="cell shrink number-of">{{flow-count}} flows</span>
           </div>
         </div>
       </div>

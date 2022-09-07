@@ -62,8 +62,9 @@ layout: default
           </div>
           <div class="text-section cell grid-x align-middle align-justify">
             <span class="cell auto name">{{ flow-type.name }}</span>
-            <!-- TODO update this number with a real number -->
-            <span class="cell shrink number-of">12 flows</span>
+            {% assign flow-count-array = site.workflows | where:"flow-type", flow-type.name %}
+            {% assign flow-count = flow-count-array | size %}
+            <span class="cell shrink number-of">{{flow-count}} flows</span>
           </div>
         </div>
       </div>
