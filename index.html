@@ -25,9 +25,8 @@ layout: default
 <section class="recently-added grid-x cell">
   <h2 class="cell">Recently Added Flows</h2>
   {% assign flow_order = site.workflows | sort: 'date' | reverse %}
-  <!-- TODO something off with this width of this container -->
   <div class="grid-x cell recently-added-item-wrapper">
-  {%- for flow in flow_order -%}
+  {%- for flow in flow_order limit:6 -%}
     <a href="{{ flow.url| prepend: site.baseurl }}" class="grid-x cell small-12 medium-4">
       {% assign app = site.data.apps[flow.application] %}
       {% assign app-name = app.name | replace: ' ', '-' %}
