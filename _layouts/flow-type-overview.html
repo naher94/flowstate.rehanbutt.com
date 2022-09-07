@@ -1,0 +1,38 @@
+---
+layout: default
+---
+<article class="grid-x cell flow-type-overview" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header grid-x cell align-middle">
+    <div class="cell shrink icon-container">
+      {{ page.icon }}
+    </div>
+    <div class="cell auto grid-x">
+      <h1 class="post-title" itemprop="name headline">{{ page.title }}</h1>
+    </div>
+  </header>
+
+  <section class="other-flows grid-x cell">
+    {% assign flow_order = site.workflows | sort: 'date' | reverse %}
+    <div class="grid-x cell mini-card-wrapper">
+      {%- for flow in flow_order -%}
+      {% if flow.flow-type == page.name %}
+      <a href="{{ flow.url| prepend: site.baseurl }}" class="grid-x cell small-12 medium-4">
+        {% assign app = site.data.apps[flow.application] %}
+        {% assign app-name = app.name | replace: ' ', '-' | downcase %}
+        <div class="workflow-mini-card grid-x cell align-justify align-middle {{ app-name }}">
+          <div class="cell auto grid-x align-middle">
+            <img src="../img/icons/{{ app.icon }}" alt="Application icon for {{flow.application}}">
+            <p class="title">{{flow.title}}</p>
+          </div>
+          <div class="cell shrink icon-container">
+            <i class="fa-solid fa-video"></i>
+          </div>
+        </div>
+      </a>
+      {% endif %}
+      {%- endfor -%}
+    </div>
+  </section>
+
+</article>

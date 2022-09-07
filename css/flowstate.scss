@@ -171,3 +171,24 @@ body {
     margin-block-start: 0.5rem;
   }
 }
+
+.flow-type-overview{
+  .post-header{
+    .icon-container{
+      background-color: #F0F1F2;
+      border-radius: $pill-radius;
+      aspect-ratio: 1/1;
+      padding: 1.5rem;
+      &::before{
+        border-radius: $pill-radius;
+      }
+      svg{
+        width: 5rem;
+        height: 5rem;
+      }
+    }
+  }
+  .other-flows{
+    margin-block-start: 0;
+  }
+}

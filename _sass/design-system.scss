@@ -69,6 +69,7 @@ section{
       &.apple-news{
         @include mini-card($apple-news-brand-color,$elevation);
       }
+      // TODO add color override for each app
       img{
         border-radius: $tile-radius;
         height: 2.5rem;
