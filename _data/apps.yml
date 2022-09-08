@@ -26,3 +26,11 @@ millies:
   name: Millies Ice Cream
   icon: "millies.svg"
   brand-color: ef4b81
+loom:
+  name: Loom
+  icon: 'loom-460x0w.webp'
+  brand-color: 565add
+soundcloud:
+  name: Soundcloud
+  icon: 'soundcloud-460x0w.webp'
+  brand-color: f50
