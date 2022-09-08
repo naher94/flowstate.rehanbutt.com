@@ -223,6 +223,9 @@ body {
       }
     }
     .word-container{
+      .post-title{
+        text-transform: capitalize;
+      }
       @include breakpoint(small only){
         justify-content: center;
       }
