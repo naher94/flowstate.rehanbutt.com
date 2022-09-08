@@ -69,6 +69,21 @@ section{
       &.apple-news{
         @include mini-card($apple-news-brand-color,$elevation);
       }
+      &.apple-store{
+        @include mini-card($apple-store-brand-color,$elevation);
+      }
+      &.target{
+        @include mini-card($target-brand-color,$elevation);
+      }
+      &.bandh{
+        @include mini-card($bandh-brand-color,$elevation);
+      }
+      &.google-fonts{
+        @include mini-card($google-fonts-brand-color,$elevation);
+      }
+      &.millies-ice-cream{
+        @include mini-card($millies-brand-color,$elevation);
+      }
       // TODO add color override for each app
       img{
         border-radius: $tile-radius;

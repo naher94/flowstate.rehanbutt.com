@@ -6,3 +6,23 @@ apple-news:
   name: Apple News
   icon: "apple-news-460x0w.webp"
   brand-color: f84969
+apple-store:
+  name: Apple Store
+  icon: "apple-store-460x0w.webp"
+  brand-color: 00BBE0
+target:
+  name: Target
+  icon: "target-460x0w.webp"
+  brand-color: CC0000
+bandh:
+  name: B&H
+  icon: "bh-460x0w.webp"
+  brand-color: C13731
+google-fonts:
+  name: Google Fonts
+  icon: "google_fonts_96dp.png"
+  brand-color: 1a73e8
+millies:
+  name: Millies Ice Cream
+  icon: "millies.svg"
+  brand-color: ef4b81
