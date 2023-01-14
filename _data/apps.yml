@@ -34,3 +34,11 @@ soundcloud:
   name: Soundcloud
   icon: 'soundcloud-460x0w.webp'
   brand-color: f50
+hulu:
+  name: Hulu
+  icon: 'hulu-460x0w.png'
+  brand-color: 1ce783
+apple-music:
+  name: Apple Music
+  icon: 'apple-music-460x0w.png'
+  brand-color: fc3c44
