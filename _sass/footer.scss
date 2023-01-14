@@ -18,6 +18,16 @@ footer{
       .copyright{
         margin-inline-end: 1em;
       }
+      .rss-feed{
+        color: semantic-color(text);
+        text-decoration: underline;
+        text-underline-offset: 0.15em;
+        margin-inline-end: 1em;
+        line-height: 1.6;
+        i{
+          margin-inline-end: 0.25em;
+        }
+      }
       .created{
         a{
           color: semantic-color(text);
