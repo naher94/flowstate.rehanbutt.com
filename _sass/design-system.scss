@@ -93,6 +93,9 @@ section{
       &.hulu{
         @include mini-card($hulu-brand-color,$elevation);
       }
+      &.apple-music{
+        @include mini-card($apple-music-brand-color,$elevation);
+      }
       // TODO add color override for each app
       img{
         border-radius: $tile-radius;
