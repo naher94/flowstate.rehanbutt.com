@@ -4,10 +4,7 @@ title: About
 permalink: /about/
 ---
 
-This is the base Jekyll theme. You can find out more info about customizing your Jekyll theme, as well as basic Jekyll usage documentation at [jekyllrb.com](http://jekyllrb.com/)
+Flowstate is a reference tool helping designers improve user flows in their designs by analyzing recognized products. Flowstate is a library of walkthrough teardowns & design patterns from the digital products all around us. Exploring trends and insights from the industry as a whole.
 
-You can find the source code for the Jekyll new theme at:
-[jekyll-new](https://github.com/jglovier/jekyll-new)
+Flowstate is a personal project by Rehan Butt.
 
-You can find the source code for Jekyll at
-[jekyll](https://github.com/jekyll/jekyll)
