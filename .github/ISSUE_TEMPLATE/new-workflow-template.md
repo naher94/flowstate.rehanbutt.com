@@ -2,7 +2,7 @@
 name: New Workflow Template
 about: New content issue template
 title: ''
-labels: ''
+labels: add workflow
 assignees: ''
 
 ---
