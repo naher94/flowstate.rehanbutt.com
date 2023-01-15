@@ -165,7 +165,7 @@ section{
       transform: scale(0.9);
     }
     .icon-container{
-      background-color: #F0F1F2;
+      background-color: $brand-light-grey;
       width: 100%;
       aspect-ratio: 5/3;
       border-radius: 10px;
@@ -186,10 +186,9 @@ section{
 }
 
 .announcement-banner{
-  background-color: #F0F1F2;
+  background-color: $brand-light-grey;
   text-align: center;
   padding: 0.75rem 0.5rem;
-  // font-weight: $lato-bold;
   font-style: italic;
   p{
     margin-bottom: 0;
