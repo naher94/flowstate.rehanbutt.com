@@ -99,6 +99,18 @@ section{
       &.design-gifts{
         @include mini-card($design-gifts-brand-color,$elevation);
       }
+      &.superlist{
+        @include mini-card($superlist-brand-color,$elevation);
+      }
+      &.railway{
+        @include mini-card($railway-brand-color,$elevation);
+      }
+      &.denada{
+        @include mini-card($denada-brand-color,$elevation);
+      }
+      &.annajona{
+        @include mini-card($annajona-brand-color,$elevation);
+      }
       // TODO add color override for each app
       img{
         border-radius: $tile-radius;
