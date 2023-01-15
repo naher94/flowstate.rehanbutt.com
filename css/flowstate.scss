@@ -87,6 +87,28 @@ body {
 
 .explore-flow-type{
   margin-block-start: 7rem;
+  a.header-link{
+    padding: 0.6rem 1rem;
+    border-radius: 10px;
+    transition: all 0.20s ease-in-out;
+    h2{
+      margin-bottom: 0;
+      .icon-wrapper{
+        transition: all 0.20s ease-in-out;
+        margin-inline-start: 0.25em;
+        margin-inline-end: 0.25em;
+      }
+    }
+    &:hover{
+      background-color: $brand-light-grey;
+      h2{
+        .icon-wrapper{
+          margin-inline-start: 0.5em;
+          margin-inline-end: 0;
+        }
+      }
+    }
+  }
 }
 
 
@@ -179,7 +201,7 @@ body {
 .post-content{
   .video-container{
     aspect-ratio: 5/3;
-    background-color: #F0F1F2;
+    background-color: $brand-light-grey;
     position: relative;
     background-image:url("../img/loading.svg");
     background-position: center;
@@ -209,7 +231,7 @@ body {
 .flow-type-overview{
   .post-header{
     .icon-container{
-      background-color: #F0F1F2;
+      background-color: $brand-light-grey;
       border-radius: $pill-radius;
       display: inline-flex;
       aspect-ratio: 1/1;
