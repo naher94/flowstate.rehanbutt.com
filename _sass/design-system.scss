@@ -96,6 +96,9 @@ section{
       &.apple-music{
         @include mini-card($apple-music-brand-color,$elevation);
       }
+      &.design-gifts{
+        @include mini-card($design-gifts-brand-color,$elevation);
+      }
       // TODO add color override for each app
       img{
         border-radius: $tile-radius;

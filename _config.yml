@@ -7,7 +7,6 @@
 
 # Site settings
 title: Flowstate
-email: your-email@domain.com
 description: > # this means to ignore newlines until "baseurl:"
   Design better user flows by analyzing recognized products. Flowstate is a library of walkthrough teardowns & design patterns from the digital products all around us. Explore trends and gain insights from the industry as a whole.
 baseurl: "" # the subpath of your site, e.g. /blog
