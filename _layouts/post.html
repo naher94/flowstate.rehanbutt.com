@@ -54,7 +54,7 @@ layout: default
       {% assign counter = counter | plus: 1 %}
       <a href="{{ flow.url| prepend: site.baseurl }}" class="grid-x cell small-12 medium-4">
         {% assign app = site.data.apps[flow.application] %}
-        {% assign app-name = app.name | replace: ' ', '-' | downcase %}
+        {% assign app-name = app.name | replace: ' ', '-' | replace: '.', '-' | downcase %}
         <div class="workflow-mini-card grid-x cell align-justify align-middle {{ app-name }}">
           <div class="cell auto grid-x align-middle">
             <img src="../img/icons/{{ app.icon }}" alt="Application icon for {{flow.application}}">
