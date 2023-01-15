@@ -46,3 +46,19 @@ design-gifts:
   name: Design Gifts
   icon: 'design-gifts-icon.png'
   brand-color: 14254f
+superlist:
+  name: Superlist
+  icon: 'superlist-icon.jpg'
+  brand-color: e75c45
+railway:
+  name: Railway
+  icon: 'railway-icon.jpg'
+  brand-color: 9D1CDD
+denada:
+  name: denada
+  icon: 'denada-icon.jpg'
+  brand-color: E35205
+annajona:
+  name: Anna Jóna
+  icon: 'annajona-icon.jpg'
+  brand-color: FC1940
