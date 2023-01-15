@@ -18,5 +18,5 @@ assignees: ''
   - [ ] Add the application brand color as a variable to ` variables.scss`
   - [ ] Add the application specific `mini-card` to `design-system.scss`
     - `&.agenda{ @include mini-card($agenda-brand-color,$elevation); } `
-  - [ ] Add the workflow type, if new, to the` _workflows` collection
+  - [ ] Add the workflow type, if new, to the` _flow-types` collection
 - [ ] Increment site version in `config.yml` with each release
