@@ -42,3 +42,7 @@ apple-music:
   name: Apple Music
   icon: 'apple-music-460x0w.png'
   brand-color: fc3c44
+design-gifts:
+  name: Design Gifts
+  icon: 'design-gifts-icon.png'
+  brand-color: 14254f
