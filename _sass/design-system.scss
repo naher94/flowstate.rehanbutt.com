@@ -111,6 +111,9 @@ section{
       &.annajona{
         @include mini-card($annajona-brand-color,$elevation);
       }
+      &.read-cv{
+        @include mini-card($read-cv-brand-color,$elevation);
+      }
       // TODO add color override for each app
       img{
         border-radius: $tile-radius;
