@@ -66,3 +66,7 @@ read-cv:
   name: 'read.cv'
   icon: 'readcv.jpg'
   brand-color: 484848
+bobby:
+  name: Bobby
+  icon: 'bobby-460x0w.webp'
+  brand-color: e56002
