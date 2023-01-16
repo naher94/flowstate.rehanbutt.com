@@ -7,6 +7,13 @@ header{
   .logo-container{
     #flowstate-logo-header{
       height: 3rem;
+      @media (prefers-color-scheme: dark){
+        g{
+          g{
+            fill: $pure-white;
+          }
+        }
+      }
     }
     @include breakpoint(small only){
       text-align: center;
@@ -14,11 +21,12 @@ header{
   }
   .site-nav{
     .page-link{
+      color: semantic-color(text);
       padding: 0.6rem 1rem;
       border-radius: $tile-radius;
       transition: $sprint;
       &:hover{
-        background-color: $brand-pink-light; //TODO semantic color
+        background-color: semantic-color(nav-page-link-bg);
         text-decoration: none;
       }
     }

@@ -62,3 +62,7 @@ annajona:
   name: Anna Jóna
   icon: 'annajona-icon.jpg'
   brand-color: FC1940
+read-cv:
+  name: 'read.cv'
+  icon: 'readcv.jpg'
+  brand-color: 484848

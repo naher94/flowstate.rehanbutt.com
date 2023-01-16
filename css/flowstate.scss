@@ -100,7 +100,7 @@ body {
       }
     }
     &:hover{
-      background-color: $brand-light-grey;
+      background-color: semantic-color(link-button-bg);
       h2{
         .icon-wrapper{
           margin-inline-start: 0.5em;
@@ -231,7 +231,7 @@ body {
 .flow-type-overview{
   .post-header{
     .icon-container{
-      background-color: $brand-light-grey;
+      background-color: semantic-color(flow-tile-bg);
       border-radius: $pill-radius;
       display: inline-flex;
       aspect-ratio: 1/1;

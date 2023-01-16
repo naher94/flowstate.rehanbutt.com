@@ -10,7 +10,7 @@ footer{
       height: 2rem;
       g{
         path{
-          fill: $pure-black; //TODO can this be semantic color?
+          fill: semantic-color(logo-footer-fill);
         }
       }
     }
@@ -41,7 +41,7 @@ footer{
     }
   }
   .suggestion-banner{
-    background-color: $twitter-blue-light;
+    background-color: semantic-color(suggestion-banner-bg);
     padding: 1rem;
     border-radius: $tile-radius-medium;
     margin-block-start: -3rem;
@@ -63,7 +63,7 @@ footer{
     .twitter{
       background-color: $twitter-blue;
       border-radius: $tile-radius;
-      color: $pure-white; //TODO semantic color
+      color: $pure-white;
       padding: 1rem;
       font-weight: $lato-bold;
       transition: $sprint;
