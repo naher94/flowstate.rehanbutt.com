@@ -37,22 +37,38 @@ $read-cv-brand-color: #484848;
 
 $brand-pink: #D12E6A;
 $brand-pink-light: #FAEAF0;
-$light-grey: #F3F3F3;
-
+$brand-pink-dark: #742342;
 $brand-light-grey: #F0F1F2;
+$brand-dark-grey: #242629;
+
+$light-grey: #F3F3F3;
 
 //Semantic colors maps the color palette above to their use across the application
 //// This method allows for several flavors of a color to be added such as a dark mode or a high contrast for example
 $semantic-colors:(
   light:(
+    body-bg: $pure-white,
     text: $pure-black,
     text-accent: $brand-pink,
     footer-bg: $light-grey,
+    suggestion-banner-bg: $twitter-blue-light,
+    announcement-banner: $brand-light-grey,
+    flow-tile-bg: $brand-light-grey,
+    nav-page-link-bg: $brand-pink-light,
+    link-button-bg: $brand-light-grey,
+    logo-footer-fill: $pure-black,
   ),
   dark:(
+    body-bg: #181A1B,
     text: $pure-white,
-    text-accent: $brand-pink, //TODO made this a different color Gissue#7
-    footer-bg: $light-grey, //TODO made this a different color Gissue#7
+    text-accent: $brand-pink,
+    footer-bg: $brand-dark-grey,
+    suggestion-banner-bg: #063E60,
+    announcement-banner: $brand-dark-grey,
+    flow-tile-bg: #3B4044,
+    nav-page-link-bg: $brand-pink-dark,
+    link-button-bg: $brand-dark-grey,
+    logo-footer-fill: $pure-white,
   ),
 );
 

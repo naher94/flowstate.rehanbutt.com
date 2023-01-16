@@ -1,20 +1,23 @@
 @mixin mini-card($main-color,$elevation){
   padding: 0.5rem;
   background-color: rgba($main-color,0.2); //TODO change this color thing
+  @media (prefers-color-scheme: dark){
+    // background-color: rgba($main-color,0.5); //TODO dark mode this
+  }
   border-radius: 16px;
-  border-bottom: 0 solid $main-color;
+  border-bottom: 0 solid $main-color; //TODO dark mode this
   transition: all 0.20s ease-in-out;
   margin-top: $elevation;
   &:hover, &:focus{
     transform: translateY(-$elevation);
-    border-bottom: $elevation solid $main-color;
+    border-bottom: $elevation solid $main-color; //TODO dark mode this
     cursor: pointer;
     transition: all 0.20s ease-in-out;
     margin-top: 0;
   }
   &:active{
-    background-color: rgba($main-color,0.3);
-    border-bottom: 0 solid $main-color;
+    background-color: rgba($main-color,0.3); //TODO dark mode this
+    border-bottom: 0 solid $main-color; //TODO dark mode this
     transform: translateY(0);
   }
 }
@@ -40,6 +43,14 @@
     box-shadow: 0 0 0 $main-color,0 0 0 0 $main-color,0 0 0 0 $main-color,0 0 0 0 $main-color,0 0 0 0 $main-color,0 0 0 0 $main-color;
     transform: translateY(0);
   }
+}
+
+body{
+  background-color: semantic-color(body-bg);
+}
+
+h1{
+  font-family: $lato;
 }
 
 h2{
@@ -165,10 +176,13 @@ section{
     background-size: 100%;
     &:hover {
       box-shadow: 0 0 0 0rem $brand-pink, 0 0 0 0.5rem rgba($brand-pink, 0.16);
+      @media (prefers-color-scheme: dark){
+        box-shadow: 0 0 0 0rem $brand-pink, 0 0 0 0.5rem rgba($brand-pink, 0.50);
+      }
       transform: scale(0.9);
     }
     .icon-container{
-      background-color: $brand-light-grey;
+      background-color: semantic-color(flow-tile-bg);
       width: 100%;
       aspect-ratio: 5/3;
       border-radius: 10px;
@@ -189,7 +203,7 @@ section{
 }
 
 .announcement-banner{
-  background-color: $brand-light-grey;
+  background-color: semantic-color(announcement-banner);
   text-align: center;
   padding: 0.75rem 0.5rem;
   font-style: italic;
