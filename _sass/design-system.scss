@@ -125,6 +125,9 @@ section{
       &.read-cv{
         @include mini-card($read-cv-brand-color,$elevation);
       }
+      &.bobby{
+        @include mini-card($bobby-brand-color,$elevation);
+      }
       // TODO add color override for each app
       img{
         border-radius: $tile-radius;
