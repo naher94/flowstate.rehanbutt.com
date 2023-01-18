@@ -1,0 +1,18 @@
+{
+	"workflow frontmatter": {
+		"scope": "markdown",
+		"prefix": "workflow frontmatter",
+		"body": [
+			"---"
+			"layout: post"
+			"title: '$1'"
+			"video-link: $2"
+			"date: $CURRENT_YEAR-$CURRENT_MONTH-$CURRENT_DATE"
+			"application: $3"
+			"flow-type: $4"
+			"tags: [$5]"
+			"---"
+		],
+		"description" : "Frontmatter for a Workflow"
+	}
+}
