@@ -70,3 +70,11 @@ bobby:
   name: Bobby
   icon: 'bobby-460x0w.webp'
   brand-color: e56002
+bento:
+  name: Bento
+  icon: 'bento-icon.jpg'
+  brand-color: 768CFF
+bezel:
+  name: Bezel
+  icon: 'bezel-icon.jpg'
+  brand-color: CEF23F

@@ -128,6 +128,12 @@ section{
       &.bobby{
         @include mini-card($bobby-brand-color,$elevation);
       }
+      &.bento{
+        @include mini-card($bento-brand-color,$elevation);
+      }
+      &.bezel{
+        @include mini-card($bezel-brand-color,$elevation);
+      }
       // TODO add color override for each app
       img{
         border-radius: $tile-radius;

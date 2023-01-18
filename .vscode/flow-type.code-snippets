@@ -1,0 +1,15 @@
+{
+	"flow type frontmatter": {
+		"scope": "markdown",
+		"prefix": "flow type frontmatter",
+		"body": [
+			"---"
+			"layout: flow-type-overview"
+			"name: '$1'"
+			"featured: no"
+			"icon: '$2'"
+			"---"
+		],
+		"description" : "Frontmatter for a Flow Type"
+	}
+}
