@@ -15,7 +15,7 @@ assignees: ''
 - [ ] Add to Flowstate site
   - [ ] Create a markdown file into the `_workflows` collection
   - [ ] Add the application, if new, to the ` _data/apps.yml`
-    - [ ] Add application icon to `img/icons` as `jpg` (Template in Figma)
+    - [ ] Add application icon to `img/icons` (Template in Figma)
   - [ ] Add the application brand color as a variable to ` variables.scss`
   - [ ] Add the application specific `mini-card` to `design-system.scss`
     - `&.agenda{ @include mini-card($agenda-brand-color,$elevation); } `
