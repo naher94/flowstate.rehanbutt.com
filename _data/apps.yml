@@ -78,3 +78,7 @@ bezel:
   name: Bezel
   icon: 'bezel-icon.jpg'
   brand-color: CEF23F
+instagram:
+  name: Instagram
+  icon: 'instagram-460x0w.webp'
+  brand-color: FF0069
