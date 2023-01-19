@@ -137,6 +137,9 @@ section{
       &.instagram{
         @include mini-card($instagram-brand-color,$elevation);
       }
+      &.qatar{
+        @include mini-card($qatar-brand-color,$elevation);
+      }
       // TODO add color override for each app
       img{
         border-radius: $tile-radius;

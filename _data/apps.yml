@@ -82,3 +82,7 @@ instagram:
   name: Instagram
   icon: 'instagram-460x0w.webp'
   brand-color: FF0069
+qatar:
+  name: Qatar Airways
+  icon: 'qatar-460x0w.webp'
+  brand-color: 5c0931
