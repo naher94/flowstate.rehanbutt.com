@@ -86,3 +86,7 @@ qatar:
   name: Qatar Airways
   icon: 'qatar-460x0w.webp'
   brand-color: 5c0931
+disney-experience:
+  name: My Disney Experience
+  icon: 'disney-experience-460x0w.webp'
+  brand-color: 072465
