@@ -1,11 +1,12 @@
 ---
 layout: default
 ---
-<article class="post grid-x">
-
+<article class="post grid-x {{page.title | downcase | replace: " ", "-"}}">
+  {%- if page.title != "About" -%}
   <header class="post-header grid-x cell">
     <h1 class="post-title">{{ page.title }}</h1>
   </header>
+  {%- endif -%}
 
   <div class="post-content grid-x cell">
     {{ content }}
