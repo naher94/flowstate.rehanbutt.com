@@ -90,3 +90,7 @@ disney-experience:
   name: My Disney Experience
   icon: 'disney-experience-460x0w.webp'
   brand-color: 072465
+steve-jobs-archive:
+  name: Steve Jobs Archive
+  icon: 'steve-jobs-archives-icon.jpg'
+  brand-color: 000000

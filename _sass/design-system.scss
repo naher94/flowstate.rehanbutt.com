@@ -143,6 +143,9 @@ section{
       &.my-disney-experience{
         @include mini-card($my-disney-experience-brand-color,$elevation);
       }
+      &.steve-jobs-archive{
+        @include mini-card($steve-jobs-archive-brand-color, $elevation);
+      }
       // TODO add color override for each app
       img{
         border-radius: $tile-radius;
