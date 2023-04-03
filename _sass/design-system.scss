@@ -146,6 +146,9 @@ section{
       &.steve-jobs-archive{
         @include mini-card($steve-jobs-archive-brand-color, $elevation);
       }
+      &.disney-animation{
+        @include mini-card($disney-animation-brand-color, $elevation);
+      }
       // TODO add color override for each app
       img{
         border-radius: $tile-radius;
