@@ -94,3 +94,7 @@ steve-jobs-archive:
   name: Steve Jobs Archive
   icon: 'steve-jobs-archives-icon.jpg'
   brand-color: 000000
+disney-animation:
+  name: Disney Animation
+  icon: 'disney-animation.png'
+  brand-color: f3783b
