@@ -106,3 +106,7 @@ vercel:
   name: Vercel
   icon: 'vercel-icon.jpg'
   brand-color: 000000
+stripe:
+  name: Stripe
+  icon: 'stripe-icon.jpg'
+  brand-color: 635BFF

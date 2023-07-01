@@ -155,6 +155,9 @@ section{
       &.vercel{
         @include mini-card($vercel-brand-color, $elevation);
       }
+      &.stripe{
+        @include mini-card($stripe-brand-color, $elevation);
+      }
       // TODO add color override for each app
       img{
         border-radius: $tile-radius;
