@@ -98,3 +98,11 @@ disney-animation:
   name: Disney Animation
   icon: 'disney-animation.png'
   brand-color: f3783b
+duolingo:
+  name: Duolingo
+  icon: 'duolingo.jpg'
+  brand-color: 78C800
+vercel:
+  name: Vercel
+  icon: 'vercel-icon.jpg'
+  brand-color: 000000

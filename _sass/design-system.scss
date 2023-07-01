@@ -149,6 +149,12 @@ section{
       &.disney-animation{
         @include mini-card($disney-animation-brand-color, $elevation);
       }
+      &.duolingo{
+        @include mini-card($duolingo-brand-color, $elevation);
+      }
+      &.vercel{
+        @include mini-card($vercel-brand-color, $elevation);
+      }
       // TODO add color override for each app
       img{
         border-radius: $tile-radius;
