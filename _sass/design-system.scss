@@ -158,6 +158,18 @@ section{
       &.stripe{
         @include mini-card($stripe-brand-color, $elevation);
       }
+      &.hbomax{
+        @include mini-card($hbomax-brand-color, $elevation);
+      }
+      &.max{
+        @include mini-card($max-brand-color, $elevation);
+      }
+      &.apollo{
+        @include mini-card($apollo-brand-color, $elevation);
+      }
+      &.tweetbot{
+        @include mini-card($tweetbot-brand-color, $elevation);
+      }
       // TODO add color override for each app
       img{
         border-radius: $tile-radius;
