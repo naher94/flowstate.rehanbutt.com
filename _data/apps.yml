@@ -110,3 +110,19 @@ stripe:
   name: Stripe
   icon: 'stripe-icon.jpg'
   brand-color: 635BFF
+hbomax:
+  name: HBO Max
+  icon: 'hbomax-460x0w.png'
+  brand-color: 5822b4
+max:
+  name: Max
+  icon: 'max-460x0w.png'
+  brand-color: 003EF9
+apollo:
+  name: Apollo
+  icon: 'apollo-460x0w.png'
+  brand-color: 4C82FF
+tweetbot:
+  name: Tweetbot
+  icon: 'tweetbot-460x0w.webp'
+  brand-color: 0070DA
