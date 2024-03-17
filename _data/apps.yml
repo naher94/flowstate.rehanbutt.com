@@ -154,3 +154,7 @@ alternativeto:
   name: AlternativeTo
   icon: 'alternativeto-icon.jpg'
   brand-color: 0289D5
+arena:
+  name: Are.na
+  icon: 'arena-icon.jpg'
+  brand-color: 000000
