@@ -170,6 +170,9 @@ section{
       &.tweetbot{
         @include mini-card($tweetbot-brand-color, $elevation);
       }
+      &.github{
+        @include mini-card($github-brand-color, $elevation);
+      }
       // TODO add color override for each app
       img{
         border-radius: $tile-radius;

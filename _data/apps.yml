@@ -126,3 +126,7 @@ tweetbot:
   name: Tweetbot
   icon: 'tweetbot-460x0w.webp'
   brand-color: 0070DA
+github:
+  name: GitHub
+  icon: 'github-460x0w.webp'
+  brand-color: 582e89
