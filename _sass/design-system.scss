@@ -179,6 +179,18 @@ section{
       &.shopify{
         @include mini-card($shopify-brand-color, $elevation);
       }
+      &.figma{
+        @include mini-card($figma-brand-color, $elevation);
+      }
+      &.mobbin{
+        @include mini-card($mobbin-brand-color, $elevation);
+      }
+      &.product-hunt{
+        @include mini-card($product-hunt-brand-color, $elevation);
+      }
+      &.alternativeto{
+        @include mini-card($alternativeto-brand-color, $elevation);
+      }
       // TODO add color override for each app
       img{
         border-radius: $tile-radius;

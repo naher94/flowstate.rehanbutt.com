@@ -138,3 +138,19 @@ shopify:
   name: Shopify
   icon: 'shopify-460x0w.webp'
   brand-color: 95BF47
+figma:
+  name: Figma
+  icon: 'figma-460x0w.webp'
+  brand-color: 000000
+mobbin:
+  name: Mobbin
+  icon: 'mobbin-icon.jpg'
+  brand-color: 000000
+producthunt:
+  name: Product Hunt
+  icon: 'producthunt-460x0w.webp'
+  brand-color: ff6154
+alternativeto:
+  name: AlternativeTo
+  icon: 'alternativeto-icon.jpg'
+  brand-color: 0289D5
