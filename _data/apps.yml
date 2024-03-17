@@ -130,3 +130,11 @@ github:
   name: GitHub
   icon: 'github-460x0w.webp'
   brand-color: 582e89
+youtube:
+  name: YouTube
+  icon: 'youtube-460x0w.webp'
+  brand-color: FF0000
+shopify:
+  name: Shopify
+  icon: 'shopify-460x0w.webp'
+  brand-color: 95BF47
