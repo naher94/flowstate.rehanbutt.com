@@ -191,6 +191,12 @@ section{
       &.alternativeto{
         @include mini-card($alternativeto-brand-color, $elevation);
       }
+      &.are-na{
+        @include mini-card($are-na-brand-color, $elevation);
+      }
+      &.uxdx{
+        @include mini-card($uxdx-brand-color, $elevation);
+      }
       // TODO add color override for each app
       img{
         border-radius: $tile-radius;
